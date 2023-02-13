@@ -81,7 +81,7 @@ X-DNS-Prefetch-Control: off
         <script>document.getElementById('jslocation').innerHTML = window.location.href;</script>
 </body>
 </html>Connection closed by foreign host.
-```rb
+```
 
 
 
