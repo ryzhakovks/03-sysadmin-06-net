@@ -1,4 +1,4 @@
-**Работа c HTTP через телнет.
+**1. Работа c HTTP через телнет.
 Подключитесь утилитой телнет к сайту stackoverflow.com telnet stackoverflow.com 80
 Отправьте HTTP запрос
 GET /questions HTTP/1.0
@@ -83,7 +83,7 @@ X-DNS-Prefetch-Control: off
 </html>Connection closed by foreign host.
 ```
 
-**Повторите задание 1 в браузере, используя консоль разработчика F12.
+**2. Повторите задание 1 в браузере, используя консоль разработчика F12.
 откройте вкладку Network
 отправьте запрос http://stackoverflow.com
 найдите первый ответ HTTP сервера, откройте вкладку Headers
@@ -98,12 +98,12 @@ X-DNS-Prefetch-Control: off
 
 ![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/225.png)
 
-**Какой IP адрес у вас в интернете?**
+**3. Какой IP адрес у вас в интернете?**
 
 root@vagrant:~# dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
 188.16.91.xxx
 
-**Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой whois**
+**4. Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой whois**
 root@vagrant:~# whois 188.16.91.xxx | grep ^descr
 descr:          Dynamic distribution IP's for broadband services
 descr:          OJSC RosteleÓom, regional branch "Urals"
@@ -127,4 +127,15 @@ ns4.zdns.google.
 ns1.zdns.google.
 ns2.zdns.google.
 ns3.zdns.google.
+```
+
+
+**8. Проверьте PTR записи для IP адресов из задания 7. Какое доменное имя привязано к IP? воспользуйтесь утилитой dig**
+
+
+```rb
+root@MMRU59A0000:~# for ip in `dig +short A dns.google`; do dig -x $ip | grep ^[0-9].*in-addr; done
+4.4.8.8.in-addr.arpa.   0       IN      PTR     4.4.8.8.in-addr.arpa.
+8.8.8.8.in-addr.arpa.   0       IN      PTR     8.8.8.8.in-addr.arpa.
+root@MMRU59A0000:~#
 ```
