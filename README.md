@@ -96,3 +96,4 @@ X-DNS-Prefetch-Control: off
 
 ![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/23.png)
 
+![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/225.png)
