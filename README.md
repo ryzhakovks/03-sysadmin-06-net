@@ -97,3 +97,20 @@ X-DNS-Prefetch-Control: off
 ![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/23.png)
 
 ![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/225.png)
+
+**Какой IP адрес у вас в интернете?**
+
+root@vagrant:~# dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
+188.16.91.*** 
+**Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой whois**
+root@vagrant:~# whois 188.16.91.*** | grep ^descr
+descr:          Dynamic distribution IP's for broadband services
+descr:          OJSC RosteleÓom, regional branch "Urals"
+descr:          Rostelecom networks
+
+**5. Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой traceroute**
+
+
+
+
+
