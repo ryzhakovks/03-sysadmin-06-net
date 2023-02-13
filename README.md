@@ -116,5 +116,11 @@ AS12389
 AS15169
 AS263411
 
-
-
+**7. Какие DNS сервера отвечают за доменное имя dns.google? Какие A записи? воспользуйтесь утилитой dig**
+```rb
+root@MMRU59A0000:~# dig +short NS dns.google
+ns4.zdns.google.
+ns1.zdns.google.
+ns2.zdns.google.
+ns3.zdns.google.
+```
