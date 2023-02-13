@@ -116,6 +116,10 @@ AS12389
 AS15169
 AS263411
 
+**6. Повторите задание 5 в утилите mtr. На каком участке наибольшая задержка - delay?**
+
+![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/2777.png)
+
 **7. Какие DNS сервера отвечают за доменное имя dns.google? Какие A записи? воспользуйтесь утилитой dig**
 ```rb
 root@MMRU59A0000:~# dig +short NS dns.google
