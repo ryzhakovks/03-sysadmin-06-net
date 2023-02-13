@@ -101,9 +101,10 @@ X-DNS-Prefetch-Control: off
 **Какой IP адрес у вас в интернете?**
 
 root@vagrant:~# dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}'
-188.16.91.*** 
+188.16.91.xxx
+
 **Какому провайдеру принадлежит ваш IP адрес? Какой автономной системе AS? Воспользуйтесь утилитой whois**
-root@vagrant:~# whois 188.16.91.*** | grep ^descr
+root@vagrant:~# whois 188.16.91.xxx | grep ^descr
 descr:          Dynamic distribution IP's for broadband services
 descr:          OJSC RosteleÓom, regional branch "Urals"
 descr:          Rostelecom networks
