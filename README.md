@@ -109,7 +109,7 @@ descr:          OJSC RosteleÓom, regional branch "Urals"
 descr:          Rostelecom networks
 
 **5. Через какие сети проходит пакет, отправленный с вашего компьютера на адрес 8.8.8.8? Через какие AS? Воспользуйтесь утилитой traceroute**
-
+![Image alt](https://github.com/ryzhakovks/03-sysadmin-06-net/blob/main/2266.png)
 
 
 
